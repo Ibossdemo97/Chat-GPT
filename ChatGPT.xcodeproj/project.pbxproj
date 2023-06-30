@@ -13,6 +13,7 @@
 		EC6234802970F5FE009954D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC62347F2970F5FE009954D7 /* Preview Assets.xcassets */; };
 		EC6234822970F5FE009954D7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6234812970F5FE009954D7 /* Persistence.swift */; };
 		EC6234852970F5FE009954D7 /* ChatGPT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EC6234832970F5FE009954D7 /* ChatGPT.xcdatamodeld */; };
+		EC62348D2970F651009954D7 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = EC62348C2970F651009954D7 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC62348D2970F651009954D7 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = ChatGPT;
+			packageProductDependencies = (
+				EC62348C2970F651009954D7 /* OpenAISwift */,
+			);
 			productName = ChatGPT;
 			productReference = EC6234752970F5FD009954D7 /* ChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = EC62346C2970F5FD009954D7;
+			packageReferences = (
+				EC62348B2970F651009954D7 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = EC6234762970F5FD009954D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -345,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC62348B2970F651009954D7 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC62348C2970F651009954D7 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC62348B2970F651009954D7 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		EC6234832970F5FE009954D7 /* ChatGPT.xcdatamodeld */ = {
